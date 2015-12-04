@@ -9,6 +9,6 @@
 
 		<input type="button" value="Sortear" name="botao_sortear" onclick="window.open('login.jsp','_parent')" />
         <input type="button" value="Reiniciar" name="botao_reiniciar" onclick="window.open('login.jsp','_parent')" />
-
+        
 </body>
 </html>

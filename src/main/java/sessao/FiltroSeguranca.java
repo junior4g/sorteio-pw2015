@@ -32,13 +32,17 @@ public class FiltroSeguranca implements Filter {
       //Obtém referência para o atributo "usuarioLogado".
       Boolean usuarioLogado = (Boolean) sessao.getAttribute("usuarioLogado");
       
+      //logar direto
       usuarioLogado = true;
       
+      //Alterar esta parte 
+      //#####################################
       if (usuarioLogado == null || usuarioLogado == false) {
         res.sendRedirect("login");  
       } else {
         chain.doFilter(request, response); //Continua com a requisição.
       }
+      //#####################################
       
     }
   }

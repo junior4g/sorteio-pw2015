@@ -22,14 +22,16 @@ public class LoginServlet extends HttpServlet {
 
     String usuario = req.getParameter("usuario");
 
-    //Usuário válido.
-    if (usuario != null && usuario.equals("joao")) {
+    //Validar sessão somente quando os dez numeros forem sorteados, ALTERAR
+    //#######################################
+    if (usuario != null && usuario.equals("#### CONTADOR DA PAGINA DE LOGIN  #####")) {
       sessao.setAttribute("usuarioLogado", true);
       resp.sendRedirect("menu");
     } else {
       sessao.setAttribute("usuarioLogado", false);
       req.getRequestDispatcher("login.jsp").forward(req, resp);
     }
+    //#######################################
   }
 
 }
